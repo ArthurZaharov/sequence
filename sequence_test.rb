@@ -7,7 +7,27 @@ class SequenceTest < Minitest::Test
     assert sequence.output == "1"
   end
 
-  def test_short_sequence
+  def test_short_sequence_1
+    sequence = Sequence.new(iterations: 1)
+    assert sequence.output == "11"
+  end
+
+  def test_short_sequence_2
+    sequence = Sequence.new(iterations: 2)
+    assert sequence.output == "21"
+  end
+
+  def test_short_sequence_3
+    sequence = Sequence.new(iterations: 3)
+    assert sequence.output == "1211"
+  end
+
+  def test_short_sequence_4
+    sequence = Sequence.new(iterations: 4)
+    assert sequence.output == "111221"
+  end
+
+  def test_short_sequence_5
     sequence = Sequence.new(iterations: 5)
     assert sequence.output == "312211"
   end
